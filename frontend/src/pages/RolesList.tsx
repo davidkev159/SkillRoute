@@ -27,7 +27,7 @@ export default function RolesList() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search roles…"
-        className="w-full max-w-sm px-3 py-2 rounded-lg border border-ink-200 text-sm placeholder:text-ink-300 focus:outline-none focus:ring-2 focus:ring-accent-100 focus:border-accent-400 transition-colors mb-6"
+        className="w-full max-w-sm px-3 py-2 rounded-lg border border-ink-200 bg-ink-100 text-sm placeholder:text-ink-400 focus:outline-none focus:ring-2 focus:ring-accent-100 focus:border-accent-400 transition-colors mb-6"
       />
 
       {state.status === "loading" && <LoadingState label="Loading roles…" />}
@@ -39,7 +39,7 @@ export default function RolesList() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.map((role) => (
             <Link key={role.id} to={`/roles/${role.id}`}>
-              <Card className="p-5 h-full hover:border-accent-200 hover:shadow-none transition-colors">
+              <Card className="p-5 h-full hover:border-accent-200 transition-colors">
                 <div className="flex items-start justify-between gap-2">
                   <p className="font-medium text-ink-900">{role.title}</p>
                   <LevelBadge level={role.level} />

@@ -22,7 +22,7 @@ export default function RoleDetail() {
       <div className="mt-3 flex items-start justify-between gap-4 flex-wrap">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-2xl font-semibold tracking-tight text-ink-900">{role.title}</h1>
+            <h1 className="text-2xl font-display font-semibold tracking-tight text-ink-900">{role.title}</h1>
             <LevelBadge level={role.level} />
           </div>
           <p className="mt-2 text-sm text-ink-500 max-w-xl leading-relaxed">{role.description}</p>
@@ -47,7 +47,7 @@ export default function RoleDetail() {
             <div className="flex items-center justify-between gap-2">
               <Link
                 to={`/skills/${req.skill.id}`}
-                className="font-medium text-ink-900 hover:text-accent-600 transition-colors"
+                className="font-medium text-ink-900 hover:text-accent-400 transition-colors"
               >
                 {req.skill.name}
               </Link>

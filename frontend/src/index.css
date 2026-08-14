@@ -1,3 +1,4 @@
+@import url("https://api.fontshare.com/v2/css?f[]=cal-sans@400,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 @tailwind base;
@@ -10,8 +11,11 @@ html {
 
 body {
   @apply bg-ink-50 text-ink-900 antialiased;
+  background-image: radial-gradient(ellipse 1200px 600px at 50% -10%, rgb(89 59 237 / 0.18), transparent 60%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 ::selection {
-  @apply bg-accent-100 text-accent-600;
+  @apply bg-accent-100 text-accent-400;
 }

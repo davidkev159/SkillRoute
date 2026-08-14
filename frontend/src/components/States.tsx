@@ -12,14 +12,14 @@ export function LoadingState({ label = "Loading…" }: { label?: string }) {
 export function ErrorState({ message, onRetry }: { message: string; onRetry?: () => void }) {
   return (
     <div className="flex flex-col items-center gap-3 py-16 text-center px-6">
-      <div className="h-10 w-10 rounded-full bg-red-50 text-red-500 flex items-center justify-center text-lg">
+      <div className="h-10 w-10 rounded-full bg-red-500/15 text-red-400 flex items-center justify-center text-lg">
         !
       </div>
       <p className="text-sm text-ink-600 max-w-sm">{message}</p>
       {onRetry && (
         <button
           onClick={onRetry}
-          className="mt-1 text-sm font-medium text-accent-600 hover:text-accent-500 transition-colors"
+          className="mt-1 text-sm font-medium text-accent-400 hover:text-accent-500 transition-colors"
         >
           Try again
         </button>

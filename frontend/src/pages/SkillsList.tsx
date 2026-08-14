@@ -33,7 +33,7 @@ export default function SkillsList() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search skills…"
-        className="w-full max-w-sm px-3 py-2 rounded-lg border border-ink-200 text-sm placeholder:text-ink-300 focus:outline-none focus:ring-2 focus:ring-accent-100 focus:border-accent-400 transition-colors mb-6"
+        className="w-full max-w-sm px-3 py-2 rounded-lg border border-ink-200 bg-ink-100 text-sm placeholder:text-ink-400 focus:outline-none focus:ring-2 focus:ring-accent-100 focus:border-accent-400 transition-colors mb-6"
       />
 
       {state.status === "loading" && <LoadingState label="Loading skills…" />}
@@ -51,7 +51,7 @@ export default function SkillsList() {
                 <Link
                   key={skill.id}
                   to={`/skills/${skill.id}`}
-                  className="px-3 py-1.5 rounded-lg border border-ink-100 bg-white text-sm text-ink-700 hover:border-accent-200 hover:text-accent-600 transition-colors"
+                  className="px-3 py-1.5 rounded-lg border border-ink-200 bg-ink-100 text-sm text-ink-700 hover:border-accent-200 hover:text-accent-400 transition-colors"
                 >
                   {skill.name}
                 </Link>

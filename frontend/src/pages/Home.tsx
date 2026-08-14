@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div>
       <div className="max-w-2xl">
-        <h1 className="text-3xl font-semibold tracking-tight text-ink-900">
+        <h1 className="text-4xl font-display font-semibold tracking-tight text-ink-900">
           Find the shortest path to your next role.
         </h1>
         <p className="mt-3 text-ink-500 leading-relaxed">
@@ -40,13 +40,13 @@ export default function Home() {
         <div className="mt-6 flex gap-3">
           <Link
             to="/gap-report"
-            className="px-4 py-2 rounded-lg bg-accent-600 text-white text-sm font-medium hover:bg-accent-500 transition-colors"
+            className="px-5 py-2.5 rounded-full bg-accent-600 text-white text-sm font-medium hover:bg-accent-500 transition-colors shadow-[0_0_24px_rgb(89_59_237_/_0.35)]"
           >
             Try a Gap Report
           </Link>
           <Link
             to="/roles"
-            className="px-4 py-2 rounded-lg border border-ink-200 text-ink-700 text-sm font-medium hover:bg-ink-50 transition-colors"
+            className="px-5 py-2.5 rounded-full border border-ink-200 text-ink-700 text-sm font-medium hover:bg-ink-100 transition-colors"
           >
             Browse roles
           </Link>
@@ -56,7 +56,7 @@ export default function Home() {
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
         {FEATURES.map((f) => (
           <Link key={f.to} to={f.to}>
-            <Card className="p-5 h-full hover:border-accent-200 hover:shadow-none transition-colors">
+            <Card className="p-5 h-full hover:border-accent-200 transition-colors">
               <p className="font-medium text-ink-900">{f.title}</p>
               <p className="mt-1.5 text-sm text-ink-500 leading-relaxed">{f.description}</p>
             </Card>

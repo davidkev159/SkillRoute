@@ -93,7 +93,7 @@ export default function GapReport() {
                 <select
                   value={personId}
                   onChange={(e) => setPersonId(e.target.value)}
-                  className="mt-2 w-full px-3 py-2 rounded-lg border border-ink-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-accent-100 focus:border-accent-400"
+                  className="mt-2 w-full px-3 py-2 rounded-lg border border-ink-200 text-sm bg-ink-100 focus:outline-none focus:ring-2 focus:ring-accent-100 focus:border-accent-400"
                 >
                   <option value="">Select a person…</option>
                   {peopleState.data.map((p) => (
@@ -104,7 +104,7 @@ export default function GapReport() {
                 </select>
               )
             ) : skillsState.status === "success" ? (
-              <div className="mt-2 max-h-48 overflow-y-auto border border-ink-100 rounded-lg p-3 flex flex-wrap gap-1.5">
+              <div className="mt-2 max-h-48 overflow-y-auto border border-ink-200 rounded-lg p-3 flex flex-wrap gap-1.5">
                 {skillsState.data.map((s) => {
                   const active = manualSkillIds.includes(s.id);
                   return (
@@ -137,7 +137,7 @@ export default function GapReport() {
               <select
                 value={roleId}
                 onChange={(e) => setRoleId(e.target.value)}
-                className="mt-2 w-full px-3 py-2 rounded-lg border border-ink-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-accent-100 focus:border-accent-400"
+                className="mt-2 w-full px-3 py-2 rounded-lg border border-ink-200 text-sm bg-ink-100 focus:outline-none focus:ring-2 focus:ring-accent-100 focus:border-accent-400"
               >
                 <option value="">Select a role…</option>
                 {rolesState.data.map((r) => (
@@ -220,7 +220,7 @@ function GapResults({ result }: { result: GapAnalysisResult }) {
                 <div>
                   <Link
                     to={`/skills/${m.skill.id}`}
-                    className="font-medium text-ink-900 hover:text-accent-600 transition-colors"
+                    className="font-medium text-ink-900 hover:text-accent-400 transition-colors"
                   >
                     {m.skill.name}
                   </Link>
@@ -270,7 +270,7 @@ function GapResults({ result }: { result: GapAnalysisResult }) {
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="px-4 py-3 rounded-lg bg-white border border-ink-100">
+    <div className="px-4 py-3 rounded-lg bg-ink-100 border border-ink-200">
       <p className="text-xs text-ink-400">{label}</p>
       <p className="text-lg font-semibold text-ink-900">{value}</p>
     </div>

@@ -56,7 +56,7 @@ export default function CareerPaths() {
           />
         </div>
         {fromRoleId && fromRoleId === toRoleId && (
-          <p className="mt-3 text-xs text-amber-600">Pick two different roles to compare.</p>
+          <p className="mt-3 text-xs text-amber-400">Pick two different roles to compare.</p>
         )}
       </Card>
 
@@ -87,7 +87,7 @@ function RoleSelect({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-2 w-full px-3 py-2 rounded-lg border border-ink-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-accent-100 focus:border-accent-400"
+        className="mt-2 w-full px-3 py-2 rounded-lg border border-ink-200 text-sm bg-ink-100 focus:outline-none focus:ring-2 focus:ring-accent-100 focus:border-accent-400"
       >
         <option value="">Select a role…</option>
         {roles.map((r) => (
@@ -112,7 +112,7 @@ function CareerResults({ result }: { result: CareerPathResult }) {
 
   return (
     <div className="space-y-8">
-      <div className="px-4 py-3 rounded-lg bg-white border border-ink-100 inline-block">
+      <div className="px-4 py-3 rounded-lg bg-ink-100 border border-ink-200 inline-block">
         <p className="text-xs text-ink-400">People who made this move</p>
         <p className="text-lg font-semibold text-ink-900">{result.precedent_count}</p>
       </div>

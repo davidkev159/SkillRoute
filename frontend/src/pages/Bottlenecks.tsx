@@ -33,7 +33,7 @@ export default function Bottlenecks() {
                     <div>
                       <Link
                         to={`/skills/${b.skill.id}`}
-                        className="font-medium text-ink-900 hover:text-accent-600 transition-colors"
+                        className="font-medium text-ink-900 hover:text-accent-400 transition-colors"
                       >
                         {b.skill.name}
                       </Link>

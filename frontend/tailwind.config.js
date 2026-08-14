@@ -5,31 +5,38 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "sans-serif"],
+        display: ["Cal Sans", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       colors: {
+        // Dark-first scale: 50 = page background (near-black), 900 = primary
+        // text (near-white). Kept the same token names as the old light
+        // theme so every existing `text-ink-900` / `bg-ink-50` usage across
+        // the app just inherits the new dark values instead of needing a
+        // rewrite.
         ink: {
-          950: "#0b0d12",
-          900: "#12151c",
-          800: "#1b1f29",
-          700: "#272c38",
-          600: "#3a4152",
-          500: "#565f74",
-          400: "#7c8496",
-          300: "#a7adba",
-          200: "#d3d6dd",
-          100: "#eaecef",
-          50: "#f6f7f8",
+          50: "#09090b",
+          100: "#18181b",
+          200: "#27272a",
+          300: "#3f3f46",
+          400: "#71717a",
+          500: "#a1a1aa",
+          600: "#d4d4d8",
+          700: "#e4e4e7",
+          800: "#f4f4f5",
+          900: "#ffffff",
+          950: "#ffffff",
         },
         accent: {
-          600: "#4f46e5",
-          500: "#6366f1",
-          400: "#818cf8",
-          100: "#e0e7ff",
-          50: "#eef0ff",
+          50: "#14103a",
+          100: "#211a5c",
+          200: "#3c2fa3",
+          400: "#9b85f8",
+          500: "#7a5ff5",
+          600: "#593bed",
         },
       },
       boxShadow: {
-        card: "0 1px 2px 0 rgb(0 0 0 / 0.04), 0 1px 6px -2px rgb(0 0 0 / 0.06)",
+        card: "0 1px 0 0 rgb(255 255 255 / 0.04) inset, 0 10px 30px -14px rgb(0 0 0 / 0.7)",
       },
     },
   },

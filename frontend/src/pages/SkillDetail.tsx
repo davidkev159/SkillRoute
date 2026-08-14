@@ -30,7 +30,7 @@ export default function SkillDetail() {
       </Link>
 
       <div className="mt-3 flex items-center gap-2">
-        <h1 className="text-2xl font-semibold tracking-tight text-ink-900">{skill.name}</h1>
+        <h1 className="text-2xl font-display font-semibold tracking-tight text-ink-900">{skill.name}</h1>
         <CategoryTag category={skill.category} />
       </div>
 
@@ -42,7 +42,7 @@ export default function SkillDetail() {
           {depths.length === 0 ? (
             <EmptyState title="No prerequisites" description="This is a foundational skill." />
           ) : (
-            <ol className="relative border-l border-ink-100 pl-5 space-y-4">
+            <ol className="relative border-l border-ink-200 pl-5 space-y-4">
               {depths.map((depth) => (
                 <li key={depth}>
                   <span className="absolute -left-[5px] mt-1.5 h-2.5 w-2.5 rounded-full bg-accent-400" />
@@ -52,7 +52,7 @@ export default function SkillDetail() {
                       <Link
                         key={p.id}
                         to={`/skills/${p.id}`}
-                        className="px-2.5 py-1 rounded-md border border-ink-100 bg-white text-sm text-ink-700 hover:border-accent-200 hover:text-accent-600 transition-colors"
+                        className="px-2.5 py-1 rounded-md border border-ink-200 bg-ink-100 text-sm text-ink-700 hover:border-accent-200 hover:text-accent-400 transition-colors"
                       >
                         {p.name}
                       </Link>
@@ -74,7 +74,7 @@ export default function SkillDetail() {
             <div className="flex flex-wrap gap-2 mb-8">
               {skill.required_by_roles.map((role) => (
                 <Link key={role.id} to={`/roles/${role.id}`}>
-                  <Card className="px-3 py-1.5 flex items-center gap-2 hover:border-accent-200 hover:shadow-none transition-colors">
+                  <Card className="px-3 py-1.5 flex items-center gap-2 hover:border-accent-200 transition-colors">
                     <span className="text-sm text-ink-700">{role.title}</span>
                     <LevelBadge level={role.level} />
                   </Card>
