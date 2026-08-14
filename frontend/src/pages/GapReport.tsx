@@ -183,7 +183,7 @@ function ModeButton({ active, onClick, children }: { active: boolean; onClick: (
     <button
       onClick={onClick}
       className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
-        active ? "bg-ink-900 text-white" : "bg-ink-50 text-ink-500 hover:bg-ink-100"
+        active ? "bg-accent-600 text-white" : "bg-ink-50 text-ink-500 hover:bg-ink-100"
       }`}
     >
       {children}
